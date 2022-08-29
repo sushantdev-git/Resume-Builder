@@ -1,6 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
-
 import {Routes, Route} from 'react-router-dom';
 import LandingPage from './Pages/LandingPage/LandingPage';
 import EditorPage from './Pages/EditorPage/EditorPage';
