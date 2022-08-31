@@ -1,0 +1,23 @@
+.Header{
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
+
+.company{
+    flex: 1;
+}
+
+.navigation{
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    list-style: none;
+}
+
+.navigation li{
+    margin-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
