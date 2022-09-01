@@ -1,0 +1,39 @@
+
+.Container{
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    background-color: #F1F5FB;
+}
+
+.MainBody{
+    width: 80%;
+}
+
+.SubHeader{
+    border-bottom: 1px solid grey;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top:50px;
+}
+
+.CreateNewTemplate{
+    color: white;
+    background-color:#1E92F2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.CreateNewTemplate:hover{
+    cursor:pointer;
+}
+
+.TemplateContainer{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    padding:50px;
+}
