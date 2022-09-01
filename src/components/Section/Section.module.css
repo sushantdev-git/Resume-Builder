@@ -1,0 +1,10 @@
+.Section{
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.SectionContents{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
