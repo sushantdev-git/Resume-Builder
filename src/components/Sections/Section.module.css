@@ -1,0 +1,29 @@
+.Section{
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.TitleAndButtons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TitleAndButtons h2{
+    margin-bottom: 10px;
+}
+.Buttons{
+    display: flex;
+}
+
+.SectionContents{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Line{
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+}

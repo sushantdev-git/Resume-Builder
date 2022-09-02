@@ -4,7 +4,7 @@
     min-height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background-color: #F1F5FB;
 }
 
@@ -15,6 +15,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: calc(100vh - 70px);
+    overflow-y: scroll;
 }
 
 .Previewer{
@@ -25,22 +27,5 @@
     background-color: #7A849A;
 }
 
-.AddSectionButton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 5px;
-    width: 45%;
-    margin-bottom: 20px;
-}
 
-.AddSectionButton:hover{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.AddSectionButton h3{
-    margin-left: 10px;
-}
 
