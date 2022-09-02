@@ -1,0 +1,23 @@
+.NavBar{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Name{
+    color: lime;
+    font-size: 25px;
+    padding-left: 1rem;   
+}
+.Greet{
+    color: lime;
+    float: right;
+    margin-right: 2rem;
+}
+.LogoName{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-left: 2rem;
+}

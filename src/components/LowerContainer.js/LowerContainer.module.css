@@ -1,0 +1,22 @@
+.LowerContainer{
+    display: flex;
+}
+.LowerContainerLeft{
+    width: 60%;
+}
+.LowerContainerRight{
+    width: 40%;
+}
+.MainHeading{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.btn{
+    height: 5rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+}

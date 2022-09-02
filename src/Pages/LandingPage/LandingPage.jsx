@@ -1,11 +1,16 @@
-import styles from './LandingPage.module.css';
+import NavBar from "../../components/NavBar/NavBar";
+import LowerContainer from "../../components/LowerContainer.js/LowerContainer";
+import styles from "./LandingPage.module.css";
 
 const LandingPage = () => {
-    return(
-        <div className={styles.Container}>
-            <h1>Landing Page</h1>
-        </div>
-    )
-}
+  return (
+    <div className={styles.Container}>
+      <div className={styles.innerContainer}>
+        <NavBar/>
+        <LowerContainer/>
+      </div>
+    </div>
+  );
+};
 
 export default LandingPage;
