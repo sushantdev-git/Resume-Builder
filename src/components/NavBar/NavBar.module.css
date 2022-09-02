@@ -6,12 +6,10 @@
 }
 
 .Name{
-    color: lime;
     font-size: 25px;
     padding-left: 1rem;   
 }
 .Greet{
-    color: lime;
     float: right;
     margin-right: 2rem;
 }

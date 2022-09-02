@@ -4,19 +4,15 @@ const LowerContainer=()=>{
     return (
         <>
             <div className={styles.LowerContainer}>
-
                 <div className={styles.LowerContainerLeft}>
-                    <p className={styles.MainHeading}>Resume Builder</p>
-                        <p className={styles.Intro}>
-                            By employing the best practices and innovative tech,Resume Builder
-                            boosts your chances of landing a better job.
-                        </p>
+                    <h1 className={styles.MainHeading}>Resume Builder</h1>
+                        <h4 className={styles.Intro}>
+                            "By employing the best practices and innovative tech,<br/>Resume Builder
+                            boosts your chances of landing a better job."
+                        </h4>
                     <button className={styles.btn}>Get Started</button>
                 </div>
-
-                {/* <div className={styles.LowerContainerRight}> */}
-                    <img className={styles.LowerContainerRight} src="./Images/LandingImage.png" alt="Landing Page Image "  />
-                {/* </div> */}
+                    <img className={styles.LowerContainerRight} src="./Images/LandingImage.png" alt="Landing Page Image"/>
             </div>
         </>
     )
