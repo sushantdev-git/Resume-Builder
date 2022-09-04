@@ -10,7 +10,7 @@ const NavBar=()=>{
                     <MdBuild className={styles.logo} size={30} />
                     <h2 className={styles.Name}>Resume Builder</h2>
                 </div>
-                <h2 className={styles.Greet}>Welcome Priyanshu Garg</h2>
+                {/* <h2 className={styles.Greet}>Welcome Priyanshu Garg</h2> */}
             </nav>
         </>
     );
