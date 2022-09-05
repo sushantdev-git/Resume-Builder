@@ -1,0 +1,29 @@
+
+.SkillItem{
+    width: 100%;
+}
+
+.Header{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Divider{
+    height: 1px;
+    width: 100%;
+    background-color: grey;
+}
+
+.Icons{
+    align-items: center;
+    display: flex;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.Header:hover .Icons{
+    opacity: 1;
+}
+

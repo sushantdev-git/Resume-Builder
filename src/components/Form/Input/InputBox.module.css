@@ -25,3 +25,9 @@
     border-bottom: 3px solid #42A0E4;
     border-radius: 3px 3px 0px 0px;
 }
+
+.Type{
+    font-style: italic;
+    display: inline;
+    color: grey;
+}

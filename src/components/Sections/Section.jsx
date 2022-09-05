@@ -8,8 +8,9 @@ import {
   } from "@fortawesome/free-solid-svg-icons";
 
 const Section = (props) => {
+    console.log("section props", props)
     return (
-        <div className={styles.Section}>
+        <div className={styles.Section} style={props.cssStyle}>
             <div className={styles.TitleAndButtons}>
                 <h2>{props.name}</h2>
                 <div className={styles.Buttons}>
