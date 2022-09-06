@@ -1,0 +1,29 @@
+
+.SkillLevelPicker{
+    width: 45%;
+    /* margin: 15px 0px; */
+}
+
+label{
+    color: #BEC3CF;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.Body{
+    height: 45px;
+    width: 100%;
+    border-radius: 3px;
+    display: flex;
+}
+
+
+.Box{
+    height: 100%;
+    border-radius: 3px;
+    width: calc(100% / 5);
+    background-color: #dae3f5;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}

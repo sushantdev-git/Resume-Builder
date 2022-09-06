@@ -2,7 +2,7 @@ import styles from './InputBox.module.css';
 
 const InputBox = (props) => {
     return (
-        <div className={styles.InputBox}>
+        <div className={styles.InputBox} style={props.style}>
             <div className={styles.Info}>
                 <label>{props.label}</label> 
             </div>

@@ -11,8 +11,8 @@ const JobSection = () => {
         }}>
             <InputBox label="Job Title"/>
             <InputBox label="Employer"/>
-            <InputBox label="From Date" type="date"/>
-            <InputBox label="Till Date" type="date"/>
+            <InputBox label="From Date" type="date" style={{width:"25%"}}/>
+            <InputBox label="Till Date" type="date" style={{width:"25%"}}/>
             <InputBox label="City"/>
             <TextArea label="About Experience"/>
         </Section>
