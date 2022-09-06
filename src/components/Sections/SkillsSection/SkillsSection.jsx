@@ -10,13 +10,24 @@ import {
   } from "@fortawesome/free-solid-svg-icons";
 import IconButton from "../../Buttons/IconButton/IconButton";
 
+import { useSelector, useDispatch } from "react-redux";
+import { PositionActions } from "../../../store/Features/Position";
+import {SKILLS_SECTION} from "../../../store/SectionIDS";
+
 const SkillsSection = () => {
+
+
+    const dispatch = useDispatch();
 
     const buttons = (
         <>
-            <IconButton icon={faAdd}/>
-            <IconButton icon={faArrowUp}/>
-            <IconButton icon={faArrowDown}/>
+            <IconButton icon={faAdd} />
+            <IconButton icon={faArrowUp} onClick={() => {
+                dispatch(PositionActions.moveUp(SKILLS_SECTION));
+            }}/>
+            <IconButton icon={faArrowDown} onClick={() => {
+                dispatch(PositionActions.moveDown(SKILLS_SECTION));
+            }}/>
             <IconButton icon={faTrash} color="red"/>
         </>
     );
