@@ -3,26 +3,10 @@ import InputBox from '../../Form/Input/InputBox';
 import Section from '../Section';
 import styles from './style.module.css';
 
-import {
-    faArrowUp,
-    faTrash,
-    faArrowDown,
-    faAdd
-  } from "@fortawesome/free-solid-svg-icons";
-
-const EducationSection = () => {
-
-    const buttons = (
-        <>
-            <IconButton icon={faAdd}/>
-            <IconButton icon={faArrowUp}/>
-            <IconButton icon={faArrowDown}/>
-            <IconButton icon={faTrash} color="red"/>
-        </>
-    );
+const EducationSection = (props) => {
 
     return (
-        <Section name="Education" buttons={buttons}>
+        <Section name="Education" sectionDetails={props.sectionDetails}>
             <InputBox label="Education Institution"/>
             <InputBox label="Degree Name"/>
             <InputBox label="From Time" type="date"/>

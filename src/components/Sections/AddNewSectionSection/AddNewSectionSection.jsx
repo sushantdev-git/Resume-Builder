@@ -10,9 +10,9 @@ import {
   faFire,
 } from "@fortawesome/free-solid-svg-icons";
 
-const AddNewSectionSection = () => {
+const AddNewSectionSection = (props) => {
     return (
-        <Section name="Add Section">
+        <Section name="Add Section" sectionDetails={props.sectionDetails}>
             <div className={styles.AddSectionButton}>
               <FontAwesomeIcon icon={faPuzzlePiece} size="2x" color="#42A0E4" />
               <h3>Custom Section</h3>

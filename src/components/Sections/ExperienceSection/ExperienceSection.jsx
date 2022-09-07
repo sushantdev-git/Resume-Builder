@@ -3,26 +3,12 @@ import Section from '../Section';
 import JobSection from './JobSection/JobSection';
 import styles from './style.module.css'
 
-import {
-    faArrowUp,
-    faTrash,
-    faArrowDown,
-    faAdd
-  } from "@fortawesome/free-solid-svg-icons";
 
+const ExperienceSection = (props) => {
 
-const ExperienceSection = () => {
-
-    const buttons = (
-        <>
-            <IconButton icon={faAdd}/>
-            <IconButton icon={faArrowUp}/>
-            <IconButton icon={faArrowDown}/>
-            <IconButton icon={faTrash} color="red"/>
-        </>
-    );
+    console.log("Experience Section props", props)
     return (
-        <Section name="Experience" buttons={buttons}>
+        <Section name="Experience" sectionDetails={props.sectionDetails}>
             <JobSection />
             <JobSection />
         </Section>

@@ -14,6 +14,8 @@ export const positionSlice = createSlice({
             IDS.PERSONAL_DETAILS_SECTION,
             IDS.EDUCATION_SECTION,
             IDS.SKILLS_SECTION,
+            IDS.EXPERIENCE_SECTION,
+            IDS.ADD_NEW_SECTION,
         ]
     },
     reducers : {
@@ -27,9 +29,9 @@ export const positionSlice = createSlice({
             swap(ind, ind-1, state.position);
         },
 
-        moveDown:(state, action) => {
-            const sectionId=action.payload;
-            let ind=state.position.findIndex(id=> id==sectionId)
+        moveDown: (state, action) => {
+            const sectionId = action.payload;
+            let ind=state.position.findIndex(id => id === sectionId)
             swap(ind, ind+1, state.position)
         }
     }
