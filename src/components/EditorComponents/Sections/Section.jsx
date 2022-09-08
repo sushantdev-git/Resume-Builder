@@ -1,10 +1,10 @@
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import IconButton from '../Buttons/IconButton/IconButton';
+import IconButton from '../../Buttons/IconButton/IconButton';
 import styles from './Section.module.css';
 
 import { useSelector , useDispatch} from 'react-redux';
-import {PositionActions} from '../../store/Features/Position'
+import {PositionActions} from '../../../store/Features/Position'
 
 
 import {

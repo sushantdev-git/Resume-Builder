@@ -1,7 +1,7 @@
-import IconButton from '../../Buttons/IconButton/IconButton';
+// import IconButton from '../../../Buttons/IconButton/IconButton';
 import Section from '../Section';
 import JobSection from './JobSection/JobSection';
-import styles from './style.module.css'
+// import styles from './style.module.css'
 
 
 const ExperienceSection = (props) => {

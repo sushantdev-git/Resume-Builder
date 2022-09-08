@@ -1,5 +1,5 @@
-import InputBox from '../../../Form/Input/InputBox';
-import TextArea from '../../../Form/TextArea/TextArea';
+import InputBox from '../../../../Form/Input/InputBox';
+import TextArea from '../../../../Form/TextArea/TextArea';
 import SectionChildWrapper from '../../SectionComponent/SectionChildWrapper';
 import styles from './style.module.css';
 

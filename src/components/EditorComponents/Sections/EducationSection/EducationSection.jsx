@@ -1,5 +1,5 @@
-import IconButton from '../../Buttons/IconButton/IconButton';
-import InputBox from '../../Form/Input/InputBox';
+import IconButton from '../../../Buttons/IconButton/IconButton';
+import InputBox from '../../../Form/Input/InputBox';
 import Section from '../Section';
 import styles from './style.module.css';
 
