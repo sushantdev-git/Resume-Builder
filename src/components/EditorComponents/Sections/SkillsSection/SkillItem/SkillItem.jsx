@@ -31,7 +31,7 @@ const SkillItem = (props) => {
         className={styles.Body}
         style={{ height: showBody ? "auto" : "0px" }}
       >
-        <InputBox label="Skill Name" onInputValueChange={(val) => setSkillName(val)}/>
+        <InputBox label="Skill Name" inputValueChange={(val) => setSkillName(val)}/>
         <SkillLevelPicker />
       </div>
       {props.showDivider ? (

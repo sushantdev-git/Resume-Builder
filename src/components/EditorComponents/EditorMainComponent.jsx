@@ -9,6 +9,7 @@ import SkillsSection from "./Sections/SkillsSection/SkillsSection";
 import { useSelector } from "react-redux";
 
 import * as IDS from "../../store/SectionIDS";
+import LinksSection from "./Sections/LinksSection/LinksSection";
 
 const mapping = {};
 mapping[IDS.PERSONAL_DETAILS_SECTION] = (idx) => (
@@ -48,6 +49,15 @@ mapping[IDS.ADD_NEW_SECTION] = (idx) => (
     sectionDetails={{
       index: idx,
       ID: IDS.ADD_NEW_SECTION,
+    }}
+  />
+);
+
+mapping[IDS.LINKS_SECTION] = (idx) => (
+  <LinksSection
+    sectionDetails={{
+      index: idx,
+      ID: IDS.LINKS_SECTION,
     }}
   />
 );

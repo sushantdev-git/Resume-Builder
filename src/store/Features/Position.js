@@ -15,6 +15,7 @@ export const positionSlice = createSlice({
             IDS.EDUCATION_SECTION,
             IDS.SKILLS_SECTION,
             IDS.EXPERIENCE_SECTION,
+            IDS.LINKS_SECTION,
             IDS.ADD_NEW_SECTION,
         ]
     },
