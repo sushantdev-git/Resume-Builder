@@ -1,15 +1,19 @@
 import InputBox from "../../../Form/Input/InputBox";
 import TextArea from "../../../Form/TextArea/TextArea";
 import Section from "../Section";
+import { useDispatch } from "react-redux";
+import { PersonalSectionActions } from "../../../../store/Features/PersonalSectionSlice";
+
 
 const PersonalSection = (props) => {
+  const dispatch=useDispatch();
   return (
     <Section name="Personal Details" sectionDetails={props.sectionDetails}>
-      <InputBox label="Full Name" />
-      <InputBox label="Email" />
-      <InputBox label="Job Title" />
-      <InputBox label="Phone" />
-      <TextArea label="About"/>
+      <InputBox label="Full Name" inputValueChange={(newValue) => dispatch(PersonalSectionActions.changeName(newValue))}/>
+      <InputBox label="Email" inputValueChange={(newValue) => dispatch(PersonalSectionActions.changeEmail(newValue))}/>
+      <InputBox label="Job Title" inputValueChange={(newValue) => dispatch(PersonalSectionActions.changeJob(newValue))}/>
+      <InputBox label="Phone" inputValueChange={(newValue) => dispatch(PersonalSectionActions.changePhoneNumber(newValue))}/>
+      <TextArea label="About" inputValueChange={(newValue) => dispatch(PersonalSectionActions.changeAbout(newValue))}/>
     </Section>
   );
 };
