@@ -1,8 +1,10 @@
 import Template2 from '../Template/Template2/Template2'
+import styles from './Previewer.module.css'
 
 const Previewer= () =>{
     return (
-        <Template2></Template2>
+        <div className={styles.Container}>
+        </div>
     )
 }
 

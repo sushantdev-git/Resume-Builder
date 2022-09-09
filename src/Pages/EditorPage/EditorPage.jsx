@@ -15,7 +15,6 @@ const EditorPage = () => {
       <div className={styles.Container}>
         <Editor />
         <div className={styles.Previewer}>
-          <h1>Previewer</h1>
           <Previewer></Previewer>
         </div>
       </div>
