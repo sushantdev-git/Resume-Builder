@@ -24,7 +24,7 @@ const SectionChildWrapper = (props) => {
           />
         </div>
       </div>
-      <div className={styles.Line}></div>
+      {showBody ? <div className={styles.Line}></div> : null}
       <div
         className={styles.SectionContents}
         style={{ height: showBody ? "auto" : "0px" }}

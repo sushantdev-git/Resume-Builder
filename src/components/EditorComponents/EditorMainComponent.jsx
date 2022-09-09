@@ -57,12 +57,10 @@ const Editor = () => {
 
   return (
     <div className={styles.Editor}>
-      <div className={styles.Editor}>
-        <h1>Build Your Résumé Here</h1>
-        {positions.map((id, ind) => {
-          return mapping[id](ind);
-        })}
-      </div>
+      <h1>Build Your Résumé Here</h1>
+      {positions.map((id, ind) => {
+        return mapping[id](ind);
+      })}
     </div>
   );
 };

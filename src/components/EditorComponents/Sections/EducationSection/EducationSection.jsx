@@ -6,7 +6,7 @@ import styles from './style.module.css';
 const EducationSection = (props) => {
 
     return (
-        <Section name="Education" sectionDetails={props.sectionDetails}>
+        <Section name="Education" sectionDetails={props.sectionDetails} addChildName={"Add Education"} onClickAddChild={() => {}}>
             <InputBox label="Education Institution"/>
             <InputBox label="Degree Name"/>
             <InputBox label="From Time" type="date"/>

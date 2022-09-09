@@ -8,7 +8,10 @@ const ExperienceSection = (props) => {
 
     console.log("Experience Section props", props)
     return (
-        <Section name="Experience" sectionDetails={props.sectionDetails}>
+        <Section name="Experience" sectionDetails={props.sectionDetails} addChildName={"Add Job"} onClickAddChild={() => {}}>
+            <JobSection />
+            <JobSection />
+            <JobSection />
             <JobSection />
             <JobSection />
         </Section>

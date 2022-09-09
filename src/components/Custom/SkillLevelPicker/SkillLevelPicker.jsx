@@ -29,6 +29,7 @@ const SkillLevelPicker = () => {
                 {[...Array(5)].map((_, ind) => {
                     return (
                         <div 
+                            key={ind}
                             className={styles.Box} 
                             style={{backgroundColor : ind < Level ? levelColor[Level] : levelColor[0]}}
                             onClick={() => setLevel(ind+1)}
