@@ -5,7 +5,7 @@ const TextArea = (props) => {
     return (
         <div className={styles.TextArea}>
             <label>{props.label}</label>
-            <textarea />
+            <textarea onChange={e => props.inputValueChange(e.target.value)} />
         </div>
     )
 }
