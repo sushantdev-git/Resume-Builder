@@ -6,7 +6,7 @@ const InputBox = (props) => {
             <div className={styles.Info}>
                 <label>{props.label}</label> 
             </div>
-            <input type={props.type ?? "text"} onChange={e => props.inputValueChange(e.target.value)} />
+            <input type={props.type ?? "text"} value={props.value} onChange={e => props.inputValueChange(e.target.value)} />
         </div>
     )
 }

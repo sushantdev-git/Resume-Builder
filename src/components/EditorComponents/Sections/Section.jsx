@@ -1,4 +1,4 @@
-import { } from "@fortawesome/free-solid-svg-icons";
+import {} from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import IconButton from "../../Buttons/IconButton/IconButton";
 import styles from "./Section.module.css";
@@ -71,11 +71,13 @@ const Section = (props) => {
         style={{ height: showBody ? "auto" : "0px" }}
       >
         {props.children}
-        {props.addChildName ? <div className={styles.AddChildButton}>
-            <FontAwesomeIcon icon={faAdd} color={"#42A0E4"}/> 
-            <div style={{width:"20px"}}></div>
+        {props.addChildName ? (
+          <div className={styles.AddChildButton} onClick={props.onClickAddChild}>
+            <FontAwesomeIcon icon={faAdd} color={"#42A0E4"} />
+            <div style={{ width: "20px" }}></div>
             {props.addChildName}
-        </div> : null}
+          </div>
+        ) : null}
       </div>
     </div>
   );
