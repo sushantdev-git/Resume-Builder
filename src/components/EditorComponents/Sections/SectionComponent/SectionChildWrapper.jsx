@@ -15,7 +15,7 @@ const SectionChildWrapper = (props) => {
   return (
     <div className={styles.Section} style={props.cssStyle}>
       <div className={styles.TitleAndButtons}>
-        <h2>{props.name}</h2>
+        <h3>{props.name}</h3>
         <div className={styles.Buttons}>
           {/* {buttons} */}
           <IconButton

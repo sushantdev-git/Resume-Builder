@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const jobObjectTemplate = {
-  jobTitle: "",
+  jobTitle: "Job Name",
   employer: "",
   fromDate: "",
   toDate: "",
@@ -44,7 +44,7 @@ export const ExperienceSectionSlice = createSlice({
     },
     addAbout: (state, action) => {
       const data = action.payload;
-      state.jobs[data.index].About.push("");
+      state.jobs[data.index].About.push("Type Here...");
     },
     updateAbout: (state, action) => {
       const data = action.payload;

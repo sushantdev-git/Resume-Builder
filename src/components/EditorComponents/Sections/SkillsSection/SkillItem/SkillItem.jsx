@@ -10,9 +10,15 @@ import SkillLevelPicker from "../../../../Custom/SkillLevelPicker/SkillLevelPick
 import InputBox from "../../../../Form/Input/InputBox";
 import styles from "./style.module.css";
 
-const SkillItem = (props) => {
+import { SkillsActions } from "../../../../../store/Features/SkillsSectionSlice";
+import { useDispatch } from "react-redux";
+
+const SkillItem = ({ data, showDivider, index }) => {
   const [showBody, setShowBody] = useState(false);
-  const [skillName, setSkillName] = useState("Enter Skill Name")
+  const { skillName, level } = data;
+
+  const dispatch = useDispatch();
+
   return (
     <div className={styles.SkillItem}>
       <div className={styles.Header}>
@@ -31,12 +37,25 @@ const SkillItem = (props) => {
         className={styles.Body}
         style={{ height: showBody ? "auto" : "0px" }}
       >
-        <InputBox label="Skill Name" inputValueChange={(val) => setSkillName(val)}/>
-        <SkillLevelPicker />
+        <InputBox
+          label="Skill Name"
+          value={skillName}
+          inputValueChange={(val) =>
+            dispatch(
+              SkillsActions.updateName({
+                index,
+                value: val,
+              })
+            )
+          }
+        />
+        <SkillLevelPicker Level={level} setLevel={(val) => dispatch(SkillsActions.updateLevel({
+          index,
+          value:val,
+        }))}/>
+        
       </div>
-      {props.showDivider ? (
-        <div className={styles.Divider}></div>
-      ) : null}
+      {showDivider ? <div className={styles.Divider}></div> : null}
     </div>
   );
 };

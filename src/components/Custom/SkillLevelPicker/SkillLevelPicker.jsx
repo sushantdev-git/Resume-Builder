@@ -18,9 +18,7 @@ const levelName = {
     5: "Master",
 }
 
-const SkillLevelPicker = () => {
-
-    const [Level, setLevel] = useState(4);
+const SkillLevelPicker = ({Level, setLevel}) => {
 
     return (
         <div className={styles.SkillLevelPicker}>
