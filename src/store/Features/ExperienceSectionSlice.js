@@ -7,6 +7,7 @@ const jobObjectTemplate = {
   toDate: "",
   city: "",
   About: [],
+  listType:"disc"
 };
 
 export const ExperienceSectionSlice = createSlice({
