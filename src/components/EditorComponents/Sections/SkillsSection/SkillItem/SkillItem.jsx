@@ -41,7 +41,7 @@ const SkillItem = ({ data, index, skillSize }) => {
           dispatch(
             ModalActions.openModal({
               callBack: () => dispatch(SkillsActions.deleteSkill({ index })),
-              content: `Do you want to delete Education/${data.degree}?`,
+              content: `Do you want to delete Education/${skillName}?`,
             })
           )
         }
