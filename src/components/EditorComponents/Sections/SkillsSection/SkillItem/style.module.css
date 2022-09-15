@@ -1,37 +1,8 @@
 
-.SkillItem{
-    width: 100%;
-}
 
-.Header{
-    height: 55px;
+.Container{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-}
-
-.Divider{
-    height: 1px;
-    width: 100%;
-    background-color: grey;
-}
-
-.Icons{
-    align-items: center;
-    display: flex;
-    opacity: 0;
-    transition: all 0.3s;
-}
-
-.Header:hover .Icons{
-    opacity: 1;
-}
-
-.Body{
-    height: auto;
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-    overflow: hidden;
 }

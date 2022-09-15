@@ -34,6 +34,7 @@ const Section = (props) => {
       {upBtnNotRenderCndn.indexOf(SD.index) == -1 ? (
         <IconButton
           icon={faArrowUp}
+          About={"Move Up"}
           onClick={() => {
             dispatch(PositionActions.moveUp(SD.ID));
           }}
@@ -42,13 +43,14 @@ const Section = (props) => {
       {downBtnNotRenderCndn.indexOf(SD.index) == -1 ? (
         <IconButton
           icon={faArrowDown}
+          About={"Move Down"}
           onClick={() => {
             dispatch(PositionActions.moveDown(props.sectionDetails.ID));
           }}
         />
       ) : null}
       {SD.index != 0 && SD.index != position.length - 1 ? (
-        <IconButton icon={faTrash} color="red" />
+        <IconButton icon={faTrash} color="red" About={"Delete"}/>
       ) : null}
     </>
   );
@@ -62,13 +64,13 @@ const Section = (props) => {
           <IconButton
             icon={showBody ? faAngleUp : faAngleDown}
             onClick={() => setShowBody(!showBody)}
+            About={showBody ? "Close" : "Open"}
           />
         </div>
       </div>
       <div className={styles.Line}></div>
-      <div
+      {showBody ? <div
         className={styles.SectionContents}
-        style={{ height: showBody ? "auto" : "0px" }}
       >
         {props.children}
         {props.addChildName ? (
@@ -78,7 +80,7 @@ const Section = (props) => {
             {props.addChildName}
           </div>
         ) : null}
-      </div>
+      </div> : null}
     </div>
   );
 };

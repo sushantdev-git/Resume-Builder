@@ -4,10 +4,10 @@ import ListView from "../../../../Form/ListView/ListView";
 import SectionChildWrapper from "../../SectionComponent/SectionChildWrapper";
 import styles from "./style.module.css";
 import { JobsActions } from "../../../../../store/Features/ExperienceSectionSlice";
+import { ModalActions } from "../../../../../store/Features/Modal";
 import IconButton from "../../../../Buttons/IconButton/IconButton";
 
 import {
-  faAngleDown,
   faArrowDown,
   faArrowUp,
   faTrash,
@@ -49,7 +49,10 @@ const JobSection = ({data, index, jobSize}) => {
     <>
       {index < jobSize-1 ? <IconButton icon={faArrowDown} onClick={() => dispatch(JobsActions.moveJobDown({index}))}/> : null}
       {index > 0 ? <IconButton icon={faArrowUp} onClick={() => dispatch(JobsActions.moveJobUp({index}))}/> : null}
-      <IconButton icon={faTrash} color="red" onClick={() => dispatch(JobsActions.deleteJob({index}))}/>
+      <IconButton icon={faTrash} color="red" onClick={() => dispatch(ModalActions.openModal({
+        callBack: () => dispatch(JobsActions.deleteJob({index})),
+        content: `Do you want to delete Experience/${data.jobTitle}?`
+      }))}/>
     </>
   )
   return (
