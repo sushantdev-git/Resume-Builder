@@ -1,0 +1,16 @@
+.Container{
+    margin: 5px 0px;
+}
+
+.bar{
+    width: 130px;
+    height: 10px;
+    background: #c3c3c3;
+    border-radius: 5px;
+}
+
+.completed{
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+}
