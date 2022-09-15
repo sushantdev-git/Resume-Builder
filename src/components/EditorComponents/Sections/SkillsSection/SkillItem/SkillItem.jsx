@@ -13,7 +13,7 @@ import styles from "./style.module.css";
 import { SkillsActions } from "../../../../../store/Features/SkillsSectionSlice";
 import { useDispatch } from "react-redux";
 
-const SkillItem = ({ data, showDivider, index }) => {
+const SkillItem = ({ data, showDivider, index, skillSize }) => {
   const [showBody, setShowBody] = useState(false);
   const { skillName, level } = data;
 
@@ -28,9 +28,9 @@ const SkillItem = ({ data, showDivider, index }) => {
             icon={faAngleDown}
             onClick={() => setShowBody(!showBody)}
           />
-          <IconButton icon={faArrowUp} />
-          <IconButton icon={faArrowDown} />
-          <IconButton icon={faTrash} color="red" />
+          {index > 0 ? <IconButton icon={faArrowUp} onClick={() => dispatch(SkillsActions.moveUp({index}))}/> : null}
+          {index < skillSize-1 ? <IconButton icon={faArrowDown} onClick={() => dispatch(SkillsActions.moveDown({index}))}/> : null}
+          <IconButton icon={faTrash} color="red" onClick={() => dispatch(SkillsActions.deleteSkill({index}))}/>
         </div>
       </div>
       <div
@@ -53,7 +53,7 @@ const SkillItem = ({ data, showDivider, index }) => {
           index,
           value:val,
         }))}/>
-        
+
       </div>
       {showDivider ? <div className={styles.Divider}></div> : null}
     </div>

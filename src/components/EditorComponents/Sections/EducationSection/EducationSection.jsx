@@ -1,16 +1,20 @@
-import IconButton from '../../../Buttons/IconButton/IconButton';
-import InputBox from '../../../Form/Input/InputBox';
+import { useSelector } from 'react-redux';
 import Section from '../Section';
+import EducationItem from './EducationItem/EducationItem';
 import styles from './style.module.css';
+import { useDispatch } from 'react-redux';
+import { EducationActions } from '../../../../store/Features/EducationSectionSlice';
 
 const EducationSection = (props) => {
 
+    const educations = useSelector(state => state.education.educations)
+    const dispatch = useDispatch();
+    console.log(educations)
     return (
-        <Section name="Education" sectionDetails={props.sectionDetails} addChildName={"Add Education"} onClickAddChild={() => {}}>
-            <InputBox label="Education Institution"/>
-            <InputBox label="Degree Name"/>
-            <InputBox label="From Time" type="date"/>
-            <InputBox label="Till Time" type="date"/>
+        <Section name="Education" sectionDetails={props.sectionDetails} addChildName={"Add Education"} onClickAddChild={() => {dispatch(EducationActions.addNewEducation())}}>
+            {educations.map((edu,ind) => {
+                return <EducationItem key={ind} data={edu} index={ind} eduSize={educations.length}/>
+            })}
         </Section>
     )
 }

@@ -17,7 +17,7 @@ const SectionChildWrapper = (props) => {
       <div className={styles.TitleAndButtons}>
         <h3>{props.name}</h3>
         <div className={styles.Buttons}>
-          {/* {buttons} */}
+          {props.buttons}
           <IconButton
             icon={showBody ? faAngleUp : faAngleDown}
             onClick={() => setShowBody(!showBody)}

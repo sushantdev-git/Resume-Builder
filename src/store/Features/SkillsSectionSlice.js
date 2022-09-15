@@ -5,6 +5,12 @@ const SkillObjectTemplate = {
     level:3,
 }
 
+function swap(ind1, ind2, arr){
+    const temp = arr[ind1];
+    arr[ind1] = arr[ind2];
+    arr[ind2] = temp;
+}
+
 export const SkillsSectionSlice = createSlice({
     name:"SkillsSection",
     initialState : {
@@ -26,6 +32,19 @@ export const SkillsSectionSlice = createSlice({
         deleteSkill: (state, action) => {
             const data = action.payload;
             const skills = state.skills.filter((_, ind) => ind != data.index);
+            state.skills = skills;
+        },
+        moveUp: (state,action) => {
+            console.log()
+            const data = action.payload;
+            const skills = state.skills;
+            swap(data.index, data.index-1, skills);
+            state.skills = skills;
+        },
+        moveDown: (state,action) => {
+            const data = action.payload;
+            const skills = state.skills;
+            swap(data.index, data.index+1, skills);
             state.skills = skills;
         }
     }

@@ -18,7 +18,7 @@ const ExperienceSection = (props) => {
       onClickAddChild={() => dispatch(JobsActions.addNew())}
     >
       {Jobs.map((jobData, ind) => {
-        return <JobSection key={ind} data={jobData} index={ind} />;
+        return <JobSection key={ind} data={jobData} index={ind} jobSize={Jobs.length}/>;
       })}
     </Section>
   );

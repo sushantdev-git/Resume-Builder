@@ -11,10 +11,17 @@
 
 .TitleAndButtons h3{
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
 .Buttons{
     display: flex;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.Section:hover .Buttons{
+    opacity: 1;
 }
 
 .SectionContents{

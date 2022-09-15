@@ -11,7 +11,7 @@ const SkillsSection = (props) => {
     return (
         <Section name="Skills" sectionDetails={props.sectionDetails} addChildName={"Add Skills"} onClickAddChild={() => {dispatch(SkillsActions.addNewSkill())}}>
             {skills.map((skillData, ind) => {
-                return <SkillItem key={ind} showDivider={ind+1 < skills.length} data={skillData} index={ind}/>
+                return <SkillItem key={ind} showDivider={ind+1 < skills.length} data={skillData} index={ind} skillSize={skills.length}/>
             })}
         </Section>
     )

@@ -1,18 +1,26 @@
 import { useDispatch } from "react-redux";
 import InputBox from "../../../../Form/Input/InputBox";
 import ListView from "../../../../Form/ListView/ListView";
-import TextArea from "../../../../Form/TextArea/TextArea";
 import SectionChildWrapper from "../../SectionComponent/SectionChildWrapper";
 import styles from "./style.module.css";
 import { JobsActions } from "../../../../../store/Features/ExperienceSectionSlice";
-const JobSection = (props) => {
-  const data = props.data;
+import IconButton from "../../../../Buttons/IconButton/IconButton";
+
+import {
+  faAngleDown,
+  faArrowDown,
+  faArrowUp,
+  faTrash,
+} from "@fortawesome/free-solid-svg-icons";
+
+const JobSection = ({data, index, jobSize}) => {
+
   const dispatch = useDispatch();
 
   const addAboutItem = () => {
     dispatch(
       JobsActions.addAbout({
-        index: props.index,
+        index,
       })
     );
   };
@@ -20,7 +28,7 @@ const JobSection = (props) => {
   const deleteAboutItem = (ind) => {
     dispatch(
       JobsActions.deleteAbout({
-        index: props.index,
+        index,
         ind,
       })
     );
@@ -29,13 +37,21 @@ const JobSection = (props) => {
   const updateAboutItem = (value, ind) => {
     dispatch(
       JobsActions.updateAbout({
-        index: props.index,
+        index,
         ind,
         value,
       })
     );
   };
 
+
+  const buttons = (
+    <>
+      {index < jobSize-1 ? <IconButton icon={faArrowDown} onClick={() => dispatch(JobsActions.moveJobDown({index}))}/> : null}
+      {index > 0 ? <IconButton icon={faArrowUp} onClick={() => dispatch(JobsActions.moveJobUp({index}))}/> : null}
+      <IconButton icon={faTrash} color="red" onClick={() => dispatch(JobsActions.deleteJob({index}))}/>
+    </>
+  )
   return (
     <SectionChildWrapper
       name={data.jobTitle}
@@ -43,6 +59,7 @@ const JobSection = (props) => {
         width: "100%",
         margin: "auto",
       }}
+      buttons={buttons}
     >
       <InputBox
         label="Job Title"
@@ -50,7 +67,7 @@ const JobSection = (props) => {
         inputValueChange={(val) =>
           dispatch(
             JobsActions.updateTitle({
-              index: props.index,
+              index: index,
               value: val,
             })
           )
@@ -62,7 +79,7 @@ const JobSection = (props) => {
         inputValueChange={(val) =>
           dispatch(
             JobsActions.updateEmployer({
-              index: props.index,
+              index: index,
               value: val,
             })
           )
@@ -76,7 +93,7 @@ const JobSection = (props) => {
         inputValueChange={(val) =>
           dispatch(
             JobsActions.updateFromDate({
-              index: props.index,
+              index: index,
               value: val,
             })
           )
@@ -90,7 +107,7 @@ const JobSection = (props) => {
         inputValueChange={(val) =>
           dispatch(
             JobsActions.updateToDate({
-              index: props.index,
+              index: index,
               value: val,
             })
           )
@@ -102,7 +119,7 @@ const JobSection = (props) => {
         inputValueChange={(val) =>
           dispatch(
             JobsActions.updateCity({
-              index: props.index,
+              index: index,
               value: val,
             })
           )

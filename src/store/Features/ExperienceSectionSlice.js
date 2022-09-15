@@ -9,6 +9,12 @@ const jobObjectTemplate = {
   About: [],
 };
 
+function swap(ind1, ind2, arr){
+  const temp = arr[ind1];
+  arr[ind1] = arr[ind2];
+  arr[ind2] = temp;
+}
+
 export const ExperienceSectionSlice = createSlice({
   name: "ExperienceSection",
   initialState: {
@@ -57,6 +63,19 @@ export const ExperienceSectionSlice = createSlice({
       );
       state.jobs[data.index].About = About;
     },
+    moveJobUp:(state, action) => {
+      const data = action.payload;
+      swap(data.index, data.index-1, state.jobs);
+    },
+    moveJobDown:(state,action) => {
+      const data = action.payload;
+      swap(data.index, data.index+1, state.jobs);
+    },
+    deleteJob:(state,action) => {
+      const data = action.payload;
+      const jobs = state.jobs.filter((_, ind) => ind != data.index);
+      state.jobs = jobs;
+    }
   },
 });
 

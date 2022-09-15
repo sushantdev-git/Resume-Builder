@@ -3,6 +3,7 @@ import PositionReducer from "./Features/Position";
 import PersonalSectionReducer from "./Features/PersonalSectionSlice";
 import ExperienceSectionReducer from "./Features/ExperienceSectionSlice";
 import SkillsSectionReducer from "./Features/SkillsSectionSlice";
+import EducationSectionReducer from './Features/EducationSectionSlice';
 import storage from 'redux-persist/lib/storage'
 import persistReducer from "redux-persist/es/persistReducer";
 
@@ -11,6 +12,7 @@ const reducers = combineReducers({
   personalDetails: PersonalSectionReducer,
   experience: ExperienceSectionReducer,
   skills: SkillsSectionReducer,
+  education: EducationSectionReducer,
 });
 
 const persistConfig = {
