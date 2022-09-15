@@ -1,0 +1,18 @@
+.Container{
+    margin-bottom: 50px;
+    border: 1ps solid red;
+}
+
+.Center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.Line{
+    width: 20px;
+    border-bottom: 1px solid grey;
+}

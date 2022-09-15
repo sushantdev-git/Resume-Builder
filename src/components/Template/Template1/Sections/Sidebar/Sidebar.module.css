@@ -1,5 +1,6 @@
 .Container{
+    background-color: #d3d3d3;
     width: 30%;
-    background-color: aqua;
     padding: 40px 20px;
+    height: 100vh;
 }

@@ -1,3 +1,4 @@
+import styles from './Jobs.module.css'
 import Subheading from '../../../../Components/Subheading/Subheading'
 import Subscript from '../../../../Components/Subscript/Subscript'
 import List from '../../../../Components/List/List'
@@ -12,12 +13,12 @@ const getDate= (date)=>{
 
 
 const Job = ({info}) => {
-    const heading=`${info.jobTitle} at ${info.employer}, ${info.city}`;
+    const heading=`${info.jobTitle} @ ${info.employer}, ${info.city}`;
     const startTime=getDate(info.fromDate);
     const endTime=getDate(info.toDate);
     const timeOfEmployement=`${startTime} - ${endTime}`
     return (
-        <div>
+        <div className={styles.Container}>
             <Subheading value={heading}></Subheading>
             <Subscript value={timeOfEmployement}></Subscript>
             <List items={info.About}></List>

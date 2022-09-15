@@ -1,8 +1,9 @@
 import styles from './Sidebar.module.css'
+import PersonalInfo from '../../Sub-Sections/PersonalInfo/PersonalInfo';
 const Sidebar = () => {
     return (
         <div className={styles.Container}>
-            Sidebar
+            <PersonalInfo></PersonalInfo>
         </div>
     )
 }

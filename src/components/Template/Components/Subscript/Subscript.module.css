@@ -1,4 +1,5 @@
 .Subscript{
     margin: 0px;
     color: grey;
+    word-wrap: break-word;
 }

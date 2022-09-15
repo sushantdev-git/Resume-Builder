@@ -1,6 +1,7 @@
 .Container{
-    margin: 50px;
+    margin: 20px;
     width: 595px;
     background-color: white;
     font-size: 0.6rem;
+    min-height: 700px;
 }

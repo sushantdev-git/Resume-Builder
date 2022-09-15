@@ -2,7 +2,7 @@ import styles from './List.module.css'
 
 const List = (props) => {
     return (
-        <ul style={{listStyleType:props.listType}}>
+        <ul className={styles.Container}>
             {props.items.map((item) => {
                 return (
                     <li>{item}</li>

@@ -7,10 +7,10 @@ import { useSelector } from 'react-redux'
 const Profile = () =>{
     const about=useSelector((state) => state.personalDetails.about)
     return (
-        <>
+        <div className={styles.Container}>
             <Heading value="Profile"></Heading>
             <Paragraph value={about}></Paragraph>
-        </>
+        </div>
     )
 }
 
