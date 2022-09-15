@@ -7,6 +7,7 @@ const jobObjectTemplate = {
   toDate: "",
   city: "",
   About: [],
+  listType:"disc"
 };
 
 function swap(ind1, ind2, arr){

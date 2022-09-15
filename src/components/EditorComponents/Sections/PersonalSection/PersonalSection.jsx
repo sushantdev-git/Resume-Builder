@@ -13,7 +13,7 @@ const PersonalSection = (props) => {
       <InputBox label="Email" inputValueChange={(newValue) => dispatch(PersonalSectionActions.changeEmail(newValue))}/>
       <InputBox label="Job Title" inputValueChange={(newValue) => dispatch(PersonalSectionActions.changeJob(newValue))}/>
       <InputBox label="Phone" inputValueChange={(newValue) => dispatch(PersonalSectionActions.changePhoneNumber(newValue))}/>
-      <TextArea label="About" inputValueChange={(newValue) => dispatch(PersonalSectionActions.changeAbout(newValue))}/>
+      <TextArea label="About" onValChange={(newValue) => dispatch(PersonalSectionActions.changeAbout(newValue))}/>
     </Section>
   );
 };
