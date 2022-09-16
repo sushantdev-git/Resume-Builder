@@ -1,5 +1,4 @@
 .Container{
     display: flex;
-    height: ;
-    border: 1px solid red;
+    min-height: inherit;
 }

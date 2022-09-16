@@ -9,7 +9,6 @@ const EducationSection = (props) => {
 
     const educations = useSelector(state => state.education.educations)
     const dispatch = useDispatch();
-    console.log(educations)
     return (
         <Section name="Education" sectionDetails={props.sectionDetails} addChildName={"Add Education"} onClickAddChild={() => {dispatch(EducationActions.addNewEducation())}}>
             {educations.map((edu,ind) => {

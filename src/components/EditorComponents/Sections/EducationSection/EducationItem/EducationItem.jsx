@@ -9,6 +9,7 @@ import {
   faArrowUp,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
+import { ModalActions } from "../../../../../store/Features/Modal";
 
 const EducationItem = ({ data, index, eduSize }) => {
   const dispatch = useDispatch();
@@ -30,10 +31,20 @@ const EducationItem = ({ data, index, eduSize }) => {
       <IconButton
         icon={faTrash}
         color="red"
-        onClick={() => dispatch(EducationActions.deleteEducation({ index }))}
+        onClick={() =>
+          dispatch(
+            ModalActions.openModal({
+              callBack: () =>
+                dispatch(EducationActions.deleteEducation({ index })),
+              content: `Do you want to delete Education/${data.degree}?`,
+            })
+          )
+        }
       />
     </>
   );
+
+  console.log(data);
   return (
     <SectionChildWrapper
       name={data.degree}
@@ -45,7 +56,7 @@ const EducationItem = ({ data, index, eduSize }) => {
     >
       <InputBox
         label="Education Institution"
-        value={data.instiute}
+        value={data.institue}
         inputValueChange={(value) =>
           dispatch(EducationActions.updateInstitute({ index, value }))
         }
@@ -60,9 +71,9 @@ const EducationItem = ({ data, index, eduSize }) => {
       <InputBox
         label="From Time"
         type="date"
-        value={data.fromDate}
+        value={data.formDate}
         inputValueChange={(value) =>
-          dispatch(EducationActions.updateFromDate({index, value }))
+          dispatch(EducationActions.updateFromDate({ index, value }))
         }
       />
       <InputBox
