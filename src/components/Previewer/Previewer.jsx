@@ -1,4 +1,4 @@
-import Template from '../Template/Template1/Template'
+import Template from '../Template/Template2/Template2'
 import styles from './Previewer.module.css'
 
 const Previewer= () =>{
