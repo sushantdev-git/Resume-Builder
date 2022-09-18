@@ -1,0 +1,10 @@
+.display{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.2em;
+    align-items: center;
+}
+
+.UniversityName{
+    font-weight: bold;
+}
