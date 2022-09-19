@@ -50,7 +50,7 @@ const Section = (props) => {
         />
       ) : null}
       {SD.index != 0 && SD.index != position.length - 1 ? (
-        <IconButton icon={faTrash} color="red" About={"Delete"}/>
+        <IconButton icon={faTrash} color="red" About={"Delete"} onClick={() => dispatch(PositionActions.removeSection(SD.ID))}/>
       ) : null}
     </>
   );

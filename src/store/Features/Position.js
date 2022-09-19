@@ -12,16 +12,14 @@ export const positionSlice = createSlice({
     initialState : {
         position: [
             IDS.PERSONAL_DETAILS_SECTION,
-            IDS.EDUCATION_SECTION,
-            IDS.SKILLS_SECTION,
-            IDS.EXPERIENCE_SECTION,
-            IDS.LINKS_SECTION,
             IDS.ADD_NEW_SECTION,
         ]
     },
     reducers : {
         addNewSection : (state, action) => {
+            state.position.pop()
             state.position.push(action.payload);
+            state.position.push(IDS.ADD_NEW_SECTION)
         },
 
         moveUp : (state, action) => {
@@ -34,6 +32,12 @@ export const positionSlice = createSlice({
             const sectionId = action.payload;
             let ind=state.position.findIndex(id => id === sectionId)
             swap(ind, ind+1, state.position)
+        },
+
+        removeSection: (state,action) => {
+            const sectionName = action.payload;
+            const RemainingSections = state.position.filter(Id => Id != sectionName);
+            state.position = RemainingSections;
         }
     }
 })
