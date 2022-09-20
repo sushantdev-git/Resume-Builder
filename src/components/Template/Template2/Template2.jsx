@@ -4,9 +4,11 @@ import Education from "./Sub-Sections/Education/Education";
 import Experience from "./Sub-Sections/Experience/Experience";
 import Projects from "./Sub-Sections/Projects/Projects";
 import Skills from "./Sub-Sections/Skills/Skills";
-const Template2 = ()=>{
+import React from "react";
+
+const Template2 =  React.forwardRef((props, ref) =>{
     return (
-        <div className={styles.Body}>
+        <div className={styles.Body} ref={ref}>
             <Top/>
             <Education/>
             <Experience/>
@@ -14,6 +16,6 @@ const Template2 = ()=>{
             <Skills/>
         </div>
     )
-}
+});
 
 export default Template2;

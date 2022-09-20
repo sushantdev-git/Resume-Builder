@@ -1,23 +1,47 @@
-import Template1 from '../Template/Template1/Template'
-import Template2 from '../Template/Template2/Template2'
-import Template3 from '../Template/Template3/Template'
-import styles from './Previewer.module.css'
-import { useSelector } from 'react-redux'
+import Template1 from "../Template/Template1/Template";
+import Template2 from "../Template/Template2/Template2";
+import Template3 from "../Template/Template3/Template";
+import styles from "./Previewer.module.css";
+import { useSelector } from "react-redux";
+import { useCallback, useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
-const Previewer= () =>{
-    const templates=[
-        () => {return <Template1></Template1> },
-        () => {return <Template2></Template2>},
-        () => {return <Template3></Template3>}
-    ]
+const Previewer = () => {
+  const templates = [
+    (x) => {
+      return <Template1 ref={x}></Template1>;
+    },
+    (x) => {
+      return <Template2 ref={x}></Template2>;
+    },
+    (x) => {
+      return <Template3 ref={x}></Template3>;
+    },
+  ];
 
-    return (
-        <div className={styles.Previewer}>
-          <div className={styles.Container}>
-            {templates[useSelector((state) =>  state.template.template)]()}
-            </div>
+  const componentRef = useRef(null);
+
+  const reactToPrintContent = useCallback(() => {
+    console.log(componentRef)
+    return componentRef.current;
+  }, [componentRef.current]);
+
+  const handlePrint = useReactToPrint({
+    content: reactToPrintContent,
+    documentTitle: "Resume",
+    removeAfterPrint: true
+  });
+
+  return (
+    <div className={styles.Previewer}>
+        <div className={styles.Actions}>
+            <button onClick={handlePrint}>Download</button>
         </div>
-    )   
-}
+      <div className={styles.Container}>
+        {templates[useSelector((state) => state.template.template)](componentRef)}
+      </div>
+    </div>
+  );
+};
 
 export default Previewer;

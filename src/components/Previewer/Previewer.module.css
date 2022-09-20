@@ -19,3 +19,21 @@
     background-color: #7A849A;
 }
 
+
+.Actions button{
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: "Poppins";
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #2395F5;
+    color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.3s;
+}
+
+.Actions button:hover{
+    transform: translateY(-4px);
+}
