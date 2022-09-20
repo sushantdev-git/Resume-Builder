@@ -1,13 +1,15 @@
+import { useSelector } from "react-redux"
 import styles from "./NameAndDuration.module.css"
 
-function NameAndDuration(){
+function NameAndDuration(props){
+    console.log(props,"name and duration")
     return(
         <div className={styles.display}>
             <div>
-                <p className={styles.UniversityName}>Scranton University</p>
-                <p>BA Business Administration</p>
+                <p className={styles.UniversityName}>{props.name}</p>
+                <p>{props.about}</p>
             </div>
-            <p className={styles.duration}>From-Till</p>
+            <p className={styles.duration}>{props.timefrom}-{props.timeto}</p>
         </div>
     )
 }

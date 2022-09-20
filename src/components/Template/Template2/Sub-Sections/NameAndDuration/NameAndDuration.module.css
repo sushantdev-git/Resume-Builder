@@ -1,10 +1,11 @@
-.display{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 0.2em;
-    align-items: center;
+.display {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  align-items: center;
 }
 
-.UniversityName{
-    font-weight: bold;
+.UniversityName {
+  font-weight: bold;
 }
