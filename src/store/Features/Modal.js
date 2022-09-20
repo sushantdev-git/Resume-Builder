@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const ModalSlice = createSlice({
     name:"modal",
     initialState: {
-        open: true,
+        open: false,
         content:"Nothing for Now",
         callBack: null,
     },
@@ -22,5 +22,6 @@ const ModalSlice = createSlice({
         }
     }
 })
+
 export const ModalActions = ModalSlice.actions;
 export default ModalSlice.reducer;
