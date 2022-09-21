@@ -9,7 +9,7 @@
 }
 
 .Previewer{
-    flex: 1;
+    width: 50%;
     min-height: inherit;
     display: flex;
     flex-direction: column;
@@ -17,8 +17,8 @@
     max-height: calc(100vh - 70px);
     overflow-y: scroll;
     background-color: #7A849A;
+    position: relative;
 }
-
 
 .Actions button{
     padding: 10px;
@@ -36,4 +36,10 @@
 
 .Actions button:hover{
     transform: translateY(-4px);
+}
+
+@media screen and (max-width: 1000px) {
+    .Previewer{
+        width: 100%;
+    }
 }
