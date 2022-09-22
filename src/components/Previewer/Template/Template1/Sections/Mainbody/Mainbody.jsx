@@ -3,7 +3,7 @@ import Profile from '../../Sub-Sections/Profile/Profile'
 import ExperienceSection from '../../Sub-Sections/ExperienceSection/ExperienceSection'
 import EducationSection from '../../Sub-Sections/EducationSection/EducationSection'
 import { useSelector } from 'react-redux'
-import * as IDS from '../../../../../store/SectionIDS'
+import * as IDS from '../../../../../../store/SectionIDS'
 
 const mapping={};
 mapping[IDS.PERSONAL_DETAILS_SECTION] = (idx) => (

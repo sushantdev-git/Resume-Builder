@@ -1,5 +1,5 @@
 import styles from './ExperienceSection.module.css'
-import Heading from '../../../Components/Heading/Heading'
+import Heading from '../../Components/Heading/Heading'
 import Job from './Job/Job'
 import { useSelector } from 'react-redux'
 

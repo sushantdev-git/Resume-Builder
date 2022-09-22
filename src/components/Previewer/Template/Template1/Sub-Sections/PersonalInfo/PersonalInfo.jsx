@@ -1,12 +1,11 @@
 import styles from './PersonalInfo.module.css'
-import Heading from '../../../Components/Heading/Heading'
-import Paragraph from '../../../Components/Paragraph/Paragraph'
-import Subheading from '../../../Components/Subheading/Subheading'
+import Heading from '../../Components/Heading/Heading'
+import Paragraph from '../../Components/Paragraph/Paragraph'
+import Subheading from '../../Components/Subheading/Subheading'
 import { useSelector } from 'react-redux'
 
 const PersonalInfo = () => {
     const info=useSelector((state) => state.personalDetails)
-    console.log(info);
     return (
         <div className={styles.Container}>
             <div className={styles.Center}>

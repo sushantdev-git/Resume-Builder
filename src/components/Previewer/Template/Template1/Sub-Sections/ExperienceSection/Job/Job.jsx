@@ -1,7 +1,7 @@
 import styles from './Jobs.module.css'
-import Subheading from '../../../../Components/Subheading/Subheading'
-import Subscript from '../../../../Components/Subscript/Subscript'
-import List from '../../../../Components/List/List'
+import Subheading from '../../../Components/Subheading/Subheading'
+import Subscript from '../../../Components/Subscript/Subscript'
+import List from '../../../Components/List/List'
 
 const getDate= (date)=>{
     const months=["JANUARY","Feburary","March","April","May","June","July","August","September","October","November","December"]

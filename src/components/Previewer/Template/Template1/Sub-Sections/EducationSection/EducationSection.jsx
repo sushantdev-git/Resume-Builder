@@ -1,6 +1,6 @@
 import styles from './EducationSection.module.css'
-import Heading from '../../../Components/Heading/Heading';
-import List from '../../../Components/List/List'
+import Heading from '../../Components/Heading/Heading';
+import List from '../../Components/List/List'
 import { useSelector } from 'react-redux';
 
 const EducationSection = () => {

@@ -1,5 +1,5 @@
 import styles from './Skills.module.css'
-import Subheading from '../../../Components/Subheading/Subheading'
+import Subheading from '../../Components/Subheading/Subheading'
 import Skill from './Skill/Skill'
 import { useSelector } from 'react-redux'
 

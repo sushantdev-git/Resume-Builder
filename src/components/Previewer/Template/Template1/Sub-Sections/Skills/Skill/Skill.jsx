@@ -1,5 +1,5 @@
 import styles from './Skill.module.css'
-import Paragraph from '../../../../Components/Paragraph/Paragraph'
+import Paragraph from '../../../Components/Paragraph/Paragraph'
 
 const Skill = ({obj}) => {
     const widths = ['20px', '40px','60px','80px','100px'];
