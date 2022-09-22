@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import FlatButton from '../../Buttons/FlatButton/FlatButton';
+import FlatButton from '../Buttons/FlatButton/FlatButton';
 import styles from './style.module.css'
 import { HelperActions } from '../../../store/Features/Helper';
 

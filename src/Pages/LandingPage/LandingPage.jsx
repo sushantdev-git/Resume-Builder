@@ -1,5 +1,5 @@
-import NavBar from "../../components/NavBar/NavBar";
-import LowerContainer from "../../components/LowerContainer.js/LowerContainer";
+import NavBar from "../../components/LandingPage/NavBar/NavBar";
+import LowerContainer from "../../components/LandingPage/LowerContainer.js/LowerContainer";
 import styles from "./LandingPage.module.css";
 import { motion } from "framer-motion";
 const LandingPage = () => {

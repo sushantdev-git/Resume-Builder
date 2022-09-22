@@ -1,6 +1,6 @@
 import {} from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import IconButton from "../../Buttons/IconButton/IconButton";
+import IconButton from "../../Custom/Buttons/IconButton/IconButton";
 import styles from "./Section.module.css";
 
 import { useSelector, useDispatch } from "react-redux";
