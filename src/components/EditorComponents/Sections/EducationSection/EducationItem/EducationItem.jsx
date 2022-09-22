@@ -9,7 +9,7 @@ import {
   faArrowUp,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
-import { ModalActions } from "../../../../../store/Features/Modal";
+import { HelperActions } from "../../../../../store/Features/Helper";
 
 const EducationItem = ({ data, index, eduSize }) => {
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ const EducationItem = ({ data, index, eduSize }) => {
         color="red"
         onClick={() =>
           dispatch(
-            ModalActions.openModal({
+            HelperActions.openModal({
               callBack: () =>
                 dispatch(EducationActions.deleteEducation({ index })),
               content: `Do you want to delete Education/${data.degree}?`,

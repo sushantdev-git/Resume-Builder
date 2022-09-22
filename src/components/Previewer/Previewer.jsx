@@ -29,7 +29,9 @@ const Previewer = () => {
   const handlePrint = useReactToPrint({
     content: reactToPrintContent,
     documentTitle: "Resume",
-    removeAfterPrint: true
+    removeAfterPrint: true,
+    copyStyles:true,
+    fonts:[{family:"Poppins"}]
   });
 
   return (

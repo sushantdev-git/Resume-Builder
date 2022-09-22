@@ -4,7 +4,7 @@ import PersonalSectionReducer from "./Features/PersonalSectionSlice";
 import ExperienceSectionReducer from "./Features/ExperienceSectionSlice";
 import SkillsSectionReducer from "./Features/SkillsSectionSlice";
 import EducationSectionReducer from './Features/EducationSectionSlice';
-import ModalReducer from './Features/Modal';
+import HelperSlice from './Features/Helper';
 import storage from 'redux-persist/lib/storage'
 import persistReducer from "redux-persist/es/persistReducer";
 import TemplateSliceReducer from "./Features/TemplateSlice"
@@ -15,7 +15,7 @@ const reducers = combineReducers({
   experience: ExperienceSectionReducer,
   skills: SkillsSectionReducer,
   education: EducationSectionReducer,
-  modal: ModalReducer,
+  helper: HelperSlice,
   template: TemplateSliceReducer,
 });
 

@@ -13,7 +13,7 @@ import styles from "./style.module.css";
 import SectionChildWrapper from "../../SectionComponent/SectionChildWrapper";
 import { SkillsActions } from "../../../../../store/Features/SkillsSectionSlice";
 import { useDispatch } from "react-redux";
-import { ModalActions } from "../../../../../store/Features/Modal";
+import { HelperActions } from "../../../../../store/Features/Helper";
 
 const SkillItem = ({ data, index, skillSize }) => {
   const { skillName, level } = data;
@@ -39,7 +39,7 @@ const SkillItem = ({ data, index, skillSize }) => {
         color="red"
         onClick={() =>
           dispatch(
-            ModalActions.openModal({
+            HelperActions.openModal({
               callBack: () => dispatch(SkillsActions.deleteSkill({ index })),
               content: `Do you want to delete Skills/${skillName}?`,
             })
