@@ -5,9 +5,9 @@ import {
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import IconButton from "../../../../Buttons/IconButton/IconButton";
+import IconButton from "../../../../Custom/Buttons/IconButton/IconButton";
 import SkillLevelPicker from "../../../../Custom/SkillLevelPicker/SkillLevelPicker";
-import InputBox from "../../../../Form/Input/InputBox";
+import InputBox from "../../../../Custom/Form/Input/InputBox";
 import styles from "./style.module.css";
 
 import SectionChildWrapper from "../../SectionComponent/SectionChildWrapper";

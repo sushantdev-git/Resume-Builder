@@ -1,5 +1,5 @@
-import InputBox from "../../../Form/Input/InputBox";
-import TextArea from "../../../Form/TextArea/TextArea";
+import InputBox from "../../../Custom/Form/Input/InputBox";
+import TextArea from "../../../Custom/Form/TextArea/TextArea";
 import Section from "../Section";
 import { useDispatch, useSelector } from "react-redux";
 import { PersonalSectionActions } from "../../../../store/Features/PersonalSectionSlice";

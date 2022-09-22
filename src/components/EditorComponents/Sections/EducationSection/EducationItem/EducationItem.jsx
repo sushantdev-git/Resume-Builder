@@ -1,7 +1,7 @@
 import SectionChildWrapper from "../../SectionComponent/SectionChildWrapper";
 // import styles from './styles.module.css';
-import IconButton from "../../../../Buttons/IconButton/IconButton";
-import InputBox from "../../../../Form/Input/InputBox";
+import IconButton from "../../../../Custom/Buttons/IconButton/IconButton";
+import InputBox from "../../../../Custom/Form/Input/InputBox";
 import { useDispatch } from "react-redux";
 import { EducationActions } from "../../../../../store/Features/EducationSectionSlice";
 import {
