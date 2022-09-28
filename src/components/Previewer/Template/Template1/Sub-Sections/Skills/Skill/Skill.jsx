@@ -7,7 +7,7 @@ const Skill = ({obj}) => {
         <div className={styles.Container}>
             <Paragraph value={obj.skillName}></Paragraph>
             <div className={styles.bar}>
-                <div className={styles.completed} style={{width : widths[obj.level]}}></div>
+                <div className={styles.completed} style={{width : `${100/5*(obj.level)}%`}}></div>
             </div>
         </div>
     )

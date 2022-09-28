@@ -6,16 +6,17 @@ import React from "react";
 const Template = React.forwardRef((props, ref) => {
   return (
     <div className={styles.Container} ref={ref}>
-      {/* <style type="text/css" media="print">
+      <style type="text/css" media="print">
         {`
             @page {
-              size: A4;
-            }
-            @page {
-              bleed: 7pt;
+              size: 2480px 3508px,
+            },
+
+            body{
+              font-size:14px,
             }
         `}
-      </style> */}
+      </style>
       <Sidebar></Sidebar>
       <Mainbody></Mainbody>
     </div>

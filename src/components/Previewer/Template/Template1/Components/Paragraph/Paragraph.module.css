@@ -2,3 +2,9 @@
     margin: 0px;
     word-wrap: break-word;
 }
+
+@media print {
+    .Paragraph{
+        font-size: 13px;
+    }
+}

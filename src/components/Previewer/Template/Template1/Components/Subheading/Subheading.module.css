@@ -4,3 +4,9 @@
     font-weight: 600;
     word-wrap: break-word;
 }
+
+@media print {
+    .Subheading{
+        font-size: 1em;
+    }
+}

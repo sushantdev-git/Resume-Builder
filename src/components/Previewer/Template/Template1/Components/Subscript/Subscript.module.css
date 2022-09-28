@@ -3,3 +3,9 @@
     color: grey;
     word-wrap: break-word;
 }
+
+@media print {
+    .Subscript{
+        font-size: 1em;
+    }
+}

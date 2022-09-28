@@ -3,3 +3,9 @@
     margin: 5px;
     word-wrap: break-word;
 }
+
+@media print {
+    .Container{
+        font-size: 13px;
+    }
+}

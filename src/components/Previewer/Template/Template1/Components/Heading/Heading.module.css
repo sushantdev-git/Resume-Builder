@@ -4,3 +4,9 @@
     font-weight: 800;
     word-wrap: break-word;
 }
+
+@media print {
+    .Heading{
+        font-size: 1.2em;
+    }
+}
