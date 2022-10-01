@@ -1,11 +1,11 @@
 .Container{
     margin: 20px;
     width: 595px;
-    background-color: white;
-    font-size: 0.6rem;
-    height: auto;
     min-height: 842px;
-    position: relative;
+    font-size: 0.6rem;
+    background-color: white;
+    /* height: auto; */
+    /* position: relative; */
     
 }
 

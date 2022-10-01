@@ -1,0 +1,24 @@
+.Container{
+    margin-bottom: 10px;
+}
+
+.employer{
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jobTitle{
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.city{
+    font-size: 0.7rem;
+    color: grey;
+}

@@ -46,7 +46,6 @@ const Mainbody = () => {
                 return mapping[id](ind);
             })}
         </div>
-        
     )
 }
 

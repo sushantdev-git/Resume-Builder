@@ -1,5 +1,5 @@
 import Template1 from "./Template/Template1/Template";
-import Template2 from "./Template/Template2/Template2";
+import Template2 from "./Template/Template2/Template";
 import Template3 from "./Template/Template3/Template";
 import styles from "./Previewer.module.css";
 import { useSelector } from "react-redux";
@@ -47,3 +47,4 @@ const Previewer = () => {
 };
 
 export default Previewer;
+

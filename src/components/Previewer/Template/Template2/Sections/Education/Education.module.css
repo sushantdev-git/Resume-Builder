@@ -1,0 +1,18 @@
+.Container{
+    margin-bottom: 20px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.institue{
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.degree{
+    font-size: 0.8rem;
+    color: grey;
+}
