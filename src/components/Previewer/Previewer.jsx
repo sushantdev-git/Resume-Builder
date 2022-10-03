@@ -31,7 +31,12 @@ const Previewer = () => {
     documentTitle: "Resume",
     removeAfterPrint: true,
     copyStyles:true,
-    fonts:[{family:"Poppins"}]
+    fonts:[
+      {
+        family: "Gilroy Black",
+        source:
+          "url(https://s166.convertio.me/p/ZnLj6w7hk5UMWX-0FIuwBg/9d87d9f4c362f9626dd4e1ce212104a7/Gilroy-Black-_1_.ttf)"
+      }]
   });
 
   return (
