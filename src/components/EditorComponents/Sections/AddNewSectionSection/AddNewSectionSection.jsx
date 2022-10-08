@@ -8,6 +8,8 @@ import {
   faPuzzlePiece,
   faSchool,
   faFire,
+  faGear,
+  faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -21,10 +23,10 @@ const AddNewSectionSection = (props) => {
 
   return (
     <Section name="Add Section" sectionDetails={props.sectionDetails}>
-      <div className={styles.AddSectionButton}>
+      {/* <div className={styles.AddSectionButton}>
         <FontAwesomeIcon icon={faPuzzlePiece} size="2x" color="#42A0E4" />
         <h3>Custom Section</h3>
-      </div>
+      </div> */}
 
       {sections.findIndex((ele) => ele == IDS.EDUCATION_SECTION) == -1 ? (
         <div className={styles.AddSectionButton} onClick={() => dispath(PositionActions.addNewSection(IDS.EDUCATION_SECTION))}>
@@ -47,6 +49,20 @@ const AddNewSectionSection = (props) => {
         </div>
       ) : null}
 
+      {sections.findIndex((ele) => ele==IDS.PROJECTS_SECTION)== -1 ? (
+        <div className={styles.AddSectionButton} onClick={()=> dispath(PositionActions.addNewSection(IDS.PROJECTS_SECTION))}>
+          <FontAwesomeIcon icon={faGear} size="2x" color="#42A0E4" />
+          <h3>Projects</h3>
+        </div>
+      ) : null}
+
+      {sections.findIndex((ele) => ele==IDS.LINKS_SECTION) == -1 ? (
+        <div className={styles.AddSectionButton} onClick={()=> dispath(PositionActions.addNewSection(IDS.LINKS_SECTION))}>
+          <FontAwesomeIcon icon={faLink} size="2x" color="#42A0E4" />
+          <h3>Links</h3>
+        </div>
+      ):null}
+      {console.log(sections)}
     </Section>
   );
 };

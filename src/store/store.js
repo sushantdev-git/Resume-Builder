@@ -8,6 +8,7 @@ import HelperSlice from './Features/Helper';
 import storage from 'redux-persist/lib/storage'
 import persistReducer from "redux-persist/es/persistReducer";
 import TemplateSliceReducer from "./Features/TemplateSlice"
+import LinksSectionSlice from "./Features/LinksSectionSlice";
 
 const reducers = combineReducers({
   position: PositionReducer,
@@ -17,6 +18,7 @@ const reducers = combineReducers({
   education: EducationSectionReducer,
   helper: HelperSlice,
   template: TemplateSliceReducer,
+  links:LinksSectionSlice
 });
 
 const persistConfig = {

@@ -12,7 +12,7 @@ const Education = () =>{
                     <div>
                         <div className={styles.flex}>
                             <div className={styles.institue}>{obj.institue}</div>
-                            <div>{`${obj.formDate} - ${obj.tillDate}`}</div>
+                            <div className={styles.date}>{`${obj.formDate} - ${obj.tillDate}`}</div>
                         </div>
                         <div className={styles.flex}>
                             <div className={styles.degree}>{obj.degree}</div>

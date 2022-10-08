@@ -5,11 +5,12 @@ import PersonalSection from "./Sections/PersonalSection/PersonalSection";
 import EducationSection from "./Sections/EducationSection/EducationSection";
 import ExperienceSection from "./Sections/ExperienceSection/ExperienceSection";
 import SkillsSection from "./Sections/SkillsSection/SkillsSection";
+import LinksSection from "./Sections/LinksSection/LinksSection";
+import ProjectsSection from "./Sections/ProjectsSection/ProjectsSection"
 
 import { useSelector } from "react-redux";
 
 import * as IDS from "../../store/SectionIDS";
-import LinksSection from "./Sections/LinksSection/LinksSection";
 
 const mapping = {};
 mapping[IDS.PERSONAL_DETAILS_SECTION] = (idx) => (
@@ -61,6 +62,15 @@ mapping[IDS.LINKS_SECTION] = (idx) => (
     }}
   />
 );
+
+mapping[IDS.PROJECTS_SECTION] = (idx) => (
+  <ProjectsSection
+    sectionDetails={{
+      index:idx,
+      ID: IDS.PROJECTS_SECTION
+    }}
+  />
+)
 
 const Editor = () => {
   const positions = useSelector((state) => state.position.position);
