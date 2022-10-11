@@ -24,7 +24,6 @@ function Dashboard() {
       exit={{opacity:0, scale:0.7}}
       transition={{duration:0.4}}
     >
-      <Header />
       <div className={styles.Container}>
         <div className={styles.MainBody}>
           <div className={styles.SubHeader}>

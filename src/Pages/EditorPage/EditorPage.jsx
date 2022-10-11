@@ -17,7 +17,6 @@ const EditorPage = () => {
       exit={{opacity:0, scale:0.7}}
       transition={{duration:0.4}}
     >
-      <Header />
       <div className={styles.Container}>
         <Editor />
         <Previewer></Previewer>

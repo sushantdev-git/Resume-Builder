@@ -45,10 +45,6 @@ export const ExperienceSectionSlice = createSlice({
       const data = action.payload;
       state.jobs[data.index].city = data.value;
     },
-    updateCity: (state, action) => {
-      const data = action.payload;
-      state.jobs[data.index].city = data.value;
-    },
     addAbout: (state, action) => {
       const data = action.payload;
       state.jobs[data.index].About.push("Type Here...");

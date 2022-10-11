@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 const Experience = () =>{
     const jobs=useSelector((state) => state.experience.jobs)
-    console.log(jobs);
+    
     return (
         <div className={styles.Container}>
             <SectionHeading id="experience" value="Experience"></SectionHeading>

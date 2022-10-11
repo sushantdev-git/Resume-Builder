@@ -6,6 +6,7 @@ import Experience from './Sections/Experience/Experience';
 import Skills from './Sections/Skills/Skills';
 import * as IDS from '../../../../store/SectionIDS'
 import { useSelector } from 'react-redux';
+import Projects from './Sections/Projects/Projects';
 
 const mapping={};
 mapping[IDS.PERSONAL_DETAILS_SECTION] = (idx) => (
@@ -42,13 +43,23 @@ mapping[IDS.SKILLS_SECTION] = (idx) => (
     />
 )
 
+mapping[IDS.PROJECTS_SECTION] = (idx) => (
+    <Projects 
+        sectionDetails={{
+            index:idx,
+            ID: IDS.PROJECTS_SECTION
+        }}
+    />
+)
+
 const Template =  React.forwardRef((props, ref) =>{
     const positions = useSelector((state) => state.position.position);
     const sections= positions.filter((section) => {
         return section==IDS.PERSONAL_DETAILS_SECTION ||
                section==IDS.EDUCATION_SECTION ||
                section==IDS.EXPERIENCE_SECTION ||
-               section==IDS.SKILLS_SECTION;
+               section==IDS.SKILLS_SECTION || 
+               section==IDS.PROJECTS_SECTION;
     }) 
 
     return (

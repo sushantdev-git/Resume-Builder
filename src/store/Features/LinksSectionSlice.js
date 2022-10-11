@@ -18,7 +18,6 @@ export const LinksSectionSlice = createSlice({
     },
     reducers:{
         addNewLink: (state) => {
-            console.log("Adding new link")
             state.links.push(LinkObjectTemplate);
         },
 
@@ -28,8 +27,9 @@ export const LinksSectionSlice = createSlice({
         },
 
         updatelink:(state, action) => {
+            console.log(action.payload.value);
             const data=action.payload;
-            state.skills[data.index].link=data.link;
+            state.links[data.index].link=data.value;
         },
 
         deleteLink:(state, action)=>{

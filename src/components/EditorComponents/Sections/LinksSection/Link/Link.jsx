@@ -61,7 +61,7 @@ const Link = ({data, index, length}) =>{
                 <InputBox
                     label="Link"
                     value={link}
-                    inputValueChange={(val) => dispatch(LinksActions.updatelink({index, value:link}))}
+                    inputValueChange={(val) => dispatch(LinksActions.updatelink({index, value:val}))}
                 />
 
 
