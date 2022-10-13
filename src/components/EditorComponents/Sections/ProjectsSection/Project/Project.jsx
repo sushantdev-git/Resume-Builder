@@ -46,6 +46,9 @@ const Project = ({data, index, projectSize}) =>{
             <InputBox
                 label="Project Title"
                 value={data.projectTitle}
+                style={{
+                    width:"100%",
+                }}
                 inputValueChange={(val) => 
                     dispatch(
                         ProjectsActions.updateTitle({

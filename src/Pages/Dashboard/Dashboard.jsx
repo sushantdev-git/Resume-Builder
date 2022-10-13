@@ -58,20 +58,6 @@ function Dashboard() {
                 alt="template2"
               />
             </button>
-            <button
-              className={styles.TemplateCard}
-              onClick={() => {
-                handleClick(2);
-              }}
-            >
-              <p className={styles.templateName}>Template 3</p>
-              <img
-                className={styles.templateImage}
-                src="./Images/template2.PNG"
-                width="250px"
-                alt="template2"
-              />
-            </button>
           </div>
         </div>
       </div>

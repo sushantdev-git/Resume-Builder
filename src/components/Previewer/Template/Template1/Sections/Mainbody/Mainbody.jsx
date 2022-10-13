@@ -2,6 +2,7 @@ import styles from './Mainbody.module.css'
 import Profile from '../../Sub-Sections/Profile/Profile'
 import ExperienceSection from '../../Sub-Sections/ExperienceSection/ExperienceSection'
 import EducationSection from '../../Sub-Sections/EducationSection/EducationSection'
+import ProjectsSection from '../../Sub-Sections/ProjectsSection/ProjectsSection'
 import { useSelector } from 'react-redux'
 import * as IDS from '../../../../../../store/SectionIDS'
 
@@ -30,6 +31,15 @@ mapping[IDS.EXPERIENCE_SECTION] = (idx) => (
     }}
 />
 );
+
+mapping[IDS.PROJECTS_SECTION] = (idx) => (
+    <ProjectsSection
+        sectionDetails={{
+            index:idx,
+            ID: IDS.PROJECTS_SECTION,
+        }}
+    />
+)
   
 
 const Mainbody = () => {
@@ -37,7 +47,8 @@ const Mainbody = () => {
     const sections= positions.filter((section) => {
         return section==IDS.PERSONAL_DETAILS_SECTION ||
                section==IDS.EDUCATION_SECTION ||
-               section==IDS.EXPERIENCE_SECTION;
+               section==IDS.EXPERIENCE_SECTION ||
+               section==IDS.PROJECTS_SECTION;
     })    
     
     return (

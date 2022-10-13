@@ -23,10 +23,6 @@ const AddNewSectionSection = (props) => {
 
   return (
     <Section name="Add Section" sectionDetails={props.sectionDetails}>
-      {/* <div className={styles.AddSectionButton}>
-        <FontAwesomeIcon icon={faPuzzlePiece} size="2x" color="#42A0E4" />
-        <h3>Custom Section</h3>
-      </div> */}
 
       {sections.findIndex((ele) => ele == IDS.EDUCATION_SECTION) == -1 ? (
         <div className={styles.AddSectionButton} onClick={() => dispath(PositionActions.addNewSection(IDS.EDUCATION_SECTION))}>
@@ -55,14 +51,6 @@ const AddNewSectionSection = (props) => {
           <h3>Projects</h3>
         </div>
       ) : null}
-
-      {sections.findIndex((ele) => ele==IDS.LINKS_SECTION) == -1 ? (
-        <div className={styles.AddSectionButton} onClick={()=> dispath(PositionActions.addNewSection(IDS.LINKS_SECTION))}>
-          <FontAwesomeIcon icon={faLink} size="2x" color="#42A0E4" />
-          <h3>Links</h3>
-        </div>
-      ):null}
-      {console.log(sections)}
     </Section>
   );
 };
